@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable name="buttonText"
+            type="java.lang.String"/>
+        <variable
+            name="calculatorViewModel"
+            type="com.example.androidcalculator.mainScreen.CalculatorViewModel" />
+    </data>
+
+    <Button
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:showIn="@layout/activity_main"
+        android:text="@{buttonText}"
+        android:textSize="45sp"
+        android:onClick="@{() -> calculatorViewModel.enterNumberSymbol(buttonText) }"
+        tools:text="@{buttonText}">
+    </Button>
+
+</layout>

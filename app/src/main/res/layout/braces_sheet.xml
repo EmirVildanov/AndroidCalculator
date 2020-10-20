@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="25dp">
+
+    <data>
+        <variable
+            name="calculatorViewModel"
+            type="com.example.androidcalculator.mainScreen.CalculatorViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_sheet_layout"
+        android:layout_width="match_parent"
+        android:layout_height="340dp"
+        android:background="@android:color/darker_gray"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <include
+            layout="@layout/calculator_operation_button"
+            android:id="@+id/openBrace"
+            android:layout_width="204dp"
+            android:layout_height="200dp"
+            android:textSize="24sp"
+            app:buttonText="@{@string/openBrace}"
+            app:calculatorViewModel="@{calculatorViewModel}"
+            app:layout_constraintEnd_toStartOf="@+id/closeBrace"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <include
+            layout="@layout/calculator_operation_button"
+            android:id="@+id/closeBrace"
+            android:layout_width="204dp"
+            android:layout_height="200dp"
+            android:textSize="24sp"
+            app:buttonText="@{@string/closeBrace}"
+            app:calculatorViewModel="@{calculatorViewModel}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/openBrace"
+            app:layout_constraintTop_toTopOf="@+id/openBrace" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
