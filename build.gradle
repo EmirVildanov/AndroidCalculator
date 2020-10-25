@@ -14,12 +14,18 @@ buildscript {
     }
 }
 
+plugins {
+    id "io.gitlab.arturbosch.detekt" version "1.14.1"
+}
+
 allprojects {
     repositories {
         google()
         jcenter()
     }
 }
+
+defaultTasks 'test', 'detekt'
 
 task clean(type: Delete) {
     delete rootProject.buildDir
