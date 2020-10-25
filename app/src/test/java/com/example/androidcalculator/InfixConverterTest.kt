@@ -1,7 +1,7 @@
 package com.example.androidcalculator
 
 import com.example.androidcalculator.mainScreen.converterCalculator.InfixConverter
-import com.example.calculator.mainScreen.converterCalculator.InfixConversionException
+import com.example.androidcalculator.mainScreen.converterCalculator.InfixConversionException
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertThrows
 import org.junit.jupiter.api.Test

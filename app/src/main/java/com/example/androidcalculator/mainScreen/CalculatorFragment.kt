@@ -8,7 +8,7 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
+import androidx.lifecycle.ViewModelProvider
 import com.example.androidcalculator.R
 import com.example.androidcalculator.databinding.CalculatorFragmentBinding
 
@@ -31,7 +31,7 @@ class CalculatorFragment : Fragment() {
             false
         )
 
-        viewModel = ViewModelProviders.of(this).get(CalculatorViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(CalculatorViewModel::class.java)
 
         binding.calculatorViewModel = viewModel
 
