@@ -13,12 +13,12 @@ class PostfixCalculatorTest {
 
     @Test
     fun shouldCalculateInputWithTwoOperations() {
-        Assertions.assertEquals(-192.0, calculator.calculate("11 5 - 32 *"))
+        Assertions.assertEquals(192.0, calculator.calculate("11 5 - 32 *"))
     }
 
     @Test
     fun shouldCalculateInputWithRealNumbers() {
-        Assertions.assertEquals(12.0, calculator.calculate("1.5 1 * 4.5 3 * -"))
+        Assertions.assertEquals(-12.0, calculator.calculate("1.5 1 * 4.5 3 * -"))
     }
 
     @Test
